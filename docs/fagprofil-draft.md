@@ -305,48 +305,48 @@
 
 ## 14. Design Systems & Component Architecture
 
-Component patterns **
-Atomic design principles **
-Design tokens *
-Component documentation **
-Reusability patterns **
-Style guides *
+- Component patterns **
+- Atomic design principles **
+- Design tokens *
+- Component documentation **
+- Reusability patterns **
+- Style guides *
 
 
 ## 15. Web Architecture Patterns
 
-MVC/MVVM patterns **
-Micro-frontends ***
-Island architecture ***
-JAMstack **
-SSR/SSG concepts **
-Hydration strategies ***
+- MVC/MVVM patterns **
+- Micro-frontends ***
+- Island architecture ***
+- JAMstack **
+- SSR/SSG concepts **
+- Hydration strategies ***
 
 
 ## 16. Cross-Platform Development
 
-PWAs (Progressive Web Apps) **
-Web Components **
-Hybrid app considerations ***
-Mobile-specific optimizations **
-Touch interactions *
+- PWAs (Progressive Web Apps) **
+- Web Components **
+- Hybrid app considerations ***
+- Mobile-specific optimizations **
+- Touch interactions *
 
 
 ## 17. Analytics & Monitoring
 
-User behavior tracking **
-Error tracking *
-Performance monitoring **
-A/B testing implementation **
-Real user monitoring (RUM) ***
-Custom event tracking *
+- User behavior tracking **
+- Error tracking *
+- Performance monitoring **
+- A/B testing implementation **
+- Real user monitoring (RUM) ***
+- Custom event tracking *
 
 
 ## 18. Developer Experience (DX)
 
-Code quality tools *
-Linting/Formatting *
-Git workflows *
-CI/CD for frontend **
-Documentation practices *
-Code review practices *
+- Code quality tools *
+- Linting/Formatting *
+- Git workflows *
+- CI/CD for frontend **
+- Documentation practices *
+- Code review practices *

@@ -1,0 +1,22 @@
+{
+  "name": "web-performance-exercise",
+  "version": "1.0.0",
+  "description": "Web performance optimization exercise",
+  "scripts": {
+    "start": "bun run server.ts",
+    "dev": "bun --watch server-good.ts",
+    "simple": "bun run simple-server.ts",
+    "simple-dev": "bun --watch simple-server.ts",
+    "convert-images": "bun run convert-images.js"
+  },
+  "keywords": [
+    "web-performance",
+    "optimization",
+    "exercise"
+  ],
+  "author": "Performance Workshop",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "^1.2.22"
+  }
+}

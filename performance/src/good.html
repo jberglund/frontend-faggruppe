@@ -98,6 +98,23 @@
         padding: 2px 4px;
         border-radius: 3px;
       }
+
+      /* Image styling */
+      .hero-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
     </style>
   </head>
   <body>
@@ -107,8 +124,41 @@
       <p>Content appears right away, JavaScript loads in the background</p>
     </div>
 
+    <!-- GOOD: Hero image above the fold with modern formats -->
+    <picture>
+      <source
+        srcset="/assets/images/optimized/placeholder-0.avif"
+        type="image/avif"
+      />
+      <source
+        srcset="/assets/images/optimized/placeholder-0.webp"
+        type="image/webp"
+      />
+      <img
+        src="/assets/images/original/placeholder-0.jpg"
+        alt="Hero image"
+        class="hero-image"
+      />
+    </picture>
+
     <div class="content">
       <div class="card">
+        <!-- GOOD: Lazy loading for below-the-fold images -->
+        <picture>
+          <source
+            srcset="/assets/images/optimized/placeholder-1.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="/assets/images/optimized/placeholder-1.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/original/placeholder-1.jpg"
+            alt="CSS optimization"
+            loading="lazy"
+          />
+        </picture>
         <h3>Solution 1: Smart CSS Loading</h3>
         <p>
           We preload important CSS and let the page render while other resources
@@ -117,6 +167,22 @@
       </div>
 
       <div class="card">
+        <!-- GOOD: Modern image formats with lazy loading -->
+        <picture>
+          <source
+            srcset="/assets/images/optimized/placeholder-2.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="/assets/images/optimized/placeholder-2.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/original/placeholder-2.jpg"
+            alt="JavaScript optimization"
+            loading="lazy"
+          />
+        </picture>
         <h3>Solution 2: JavaScript at the Bottom</h3>
         <p>
           JavaScript loads after the content, so it doesn't block the page from
@@ -140,12 +206,31 @@
       </div>
 
       <div class="card">
-        <h3>Solution 4: Proper Caching</h3>
+        <!-- GOOD: Optimized images with lazy loading -->
+        <picture>
+          <source
+            srcset="/assets/images/optimized/placeholder-3.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="/assets/images/optimized/placeholder-3.webp"
+            type="image/webp"
+          />
+          <img
+            src="/assets/images/original/placeholder-3.jpg"
+            alt="Caching benefits"
+            loading="lazy"
+          />
+        </picture>
+        <h3>Solution 4: Proper Caching & Image Optimization</h3>
         <p>
-          Variable font files are cached with long expiration times. Once
-          downloaded, they're reused across visits and pages.
+          Variable font files are cached with long expiration times. Modern
+          image formats (AVIF, WebP) provide 60-80% smaller file sizes than
+          JPEG.
         </p>
-        <p>Benefits: <code>~700KB saved on repeat visits</code></p>
+        <p>
+          Benefits: <code>~700KB saved on repeat visits + smaller images</code>
+        </p>
       </div>
     </div>
 

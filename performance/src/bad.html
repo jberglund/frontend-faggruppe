@@ -84,6 +84,23 @@
         padding: 2px 4px;
         border-radius: 3px;
       }
+
+      /* Image styling */
+      .hero-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
     </style>
   </head>
   <body>
@@ -93,8 +110,20 @@
       <p>Everything is blocked until CSS and JavaScript finish downloading</p>
     </div>
 
+    <!-- BAD: Hero image using large JPEG format, no modern formats -->
+    <img
+      src="/assets/images/original/placeholder-0.jpg"
+      alt="Hero image"
+      class="hero-image"
+    />
+
     <div class="content">
       <div class="card">
+        <!-- BAD: Large JPEG without lazy loading -->
+        <img
+          src="/assets/images/original/placeholder-1.jpg"
+          alt="CSS blocking"
+        />
         <h3>Problem 1: Blocking CSS</h3>
         <p>
           The CSS file in the head stops the browser from showing anything until
@@ -103,6 +132,11 @@
       </div>
 
       <div class="card">
+        <!-- BAD: No image optimization, loads immediately -->
+        <img
+          src="/assets/images/original/placeholder-2.jpg"
+          alt="JavaScript blocking"
+        />
         <h3>Problem 2: Blocking JavaScript</h3>
         <p>
           The JavaScript file also blocks rendering, even though we don't need
@@ -124,14 +158,19 @@
       </div>
 
       <div class="card">
-        <h3>Problem 4: No Caching</h3>
+        <!-- BAD: Large unoptimized image -->
+        <img
+          src="/assets/images/original/placeholder-3.jpg"
+          alt="No caching or optimization"
+        />
+        <h3>Problem 4: No Caching & Unoptimized Images</h3>
         <p>
           Every time you refresh, the large variable font files download again
           because there's no caching. Variable fonts can be several MB!
         </p>
         <p>
-          File sizes: <code>Inter ~500KB</code>,
-          <code>Geist Mono ~200KB</code>
+          File sizes: <code>Inter ~500KB</code>, <code>Geist Mono ~200KB</code>,
+          plus large JPEG images that could be 60-80% smaller as WebP/AVIF.
         </p>
       </div>
     </div>
